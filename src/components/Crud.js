@@ -18,7 +18,7 @@ const Crud = () => {
 
   return (
     <div>
-        <div className="addUser">
+        <div className="mt-5 mb-2">
             <input type='text' placeholder="Name" onChange={(event) => setName(event.target.value)}/>
 
             <input type='text' placeholder="userName" onChange={(event) => setUserName(event.target.value)}/>
@@ -43,6 +43,7 @@ const Crud = () => {
                                     {user.userName}
                                 </Card.Text>
                                 <input 
+                                    className="mt-2"
                                     type="text"
                                     placeholder="New User Name"
                                     onChange={(event) => {
@@ -50,7 +51,7 @@ const Crud = () => {
                                     }}    
                                 />
                                 <Button 
-                                
+                                    className="mt-2"
                                     variant="primary"
                                     onClick={() => {
                                         dispatch(updateUserName({
@@ -60,6 +61,7 @@ const Crud = () => {
                                     }}
                                     >Update User Name</Button>
                                 <Button 
+                                    className="mt-2"
                                     variant="primary"
                                     onClick={() => {dispatch(deleteUser(
                                         {id: user.id}))
